@@ -10,7 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-*.local
+# docs/ is intentionally committed for GitHub Pages
 
 # Editor directories and files
 .vscode/*
