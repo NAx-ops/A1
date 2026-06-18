@@ -2,16 +2,323 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="./logo.png" />
+    <link rel="icon" type="image/png" href="logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A1 Pressure Washing offers affordable, high-quality power washing for homes, driveways, decks, and more in the DMV area. Great results guaranteed." />
     <title>A1 Pressure Washing | DMV's Premier Power Washing</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="#hero" class="nav-brand">
+          <img src="logo.png" alt="A1 Pressure Washing" class="nav-logo" />
+          <span class="nav-brand-name">A1 Pressure Washing</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="https://calendly.com/a1pressurewash000" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-cta">
+            Book Now
+          </a>
+        </nav>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="https://calendly.com/a1pressurewash000" target="_blank" rel="noopener noreferrer" class="btn btn-primary mobile-cta">
+        Book Now
+      </a>
+    </div>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="hero">
+        <div class="hero-bg">
+          <img src="images/house.png" alt="Beautifully power-washed home" class="hero-bg-img" />
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-icon">☀️</span>
+            <span class="hero-badge-text">Summer Special Deal — Coming Soon</span>
+          </div>
+          <h1 class="hero-heading">
+            Transform Your<br />
+            <span class="hero-accent">Property's</span> Appeal
+          </h1>
+          <p class="hero-sub">
+            DMV's premier power washing service. Specializing in homes,
+            driveways, decks, and more. Affordable prices, great results.
+          </p>
+          <div class="hero-actions">
+            <a href="https://calendly.com/a1pressurewash000" target="_blank" rel="noopener noreferrer" class="btn btn-primary-light">
+              Book Now
+            </a>
+            <a href="#services" class="btn btn-ghost">View Services</a>
+            <a href="https://www.facebook.com/a1pressurewashing" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+              View us on Facebook
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-num">100%</span>
+              <span class="hero-stat-label">Satisfaction</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">DMV</span>
+              <span class="hero-stat-label">Area</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">A1</span>
+              <span class="hero-stat-label">Quality</span>
+            </div>
+          </div>
+        </div>
+        <a href="#services" class="hero-scroll-hint" aria-label="Scroll down">
+          <div class="hero-scroll-line"></div>
+        </a>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="services">
+        <div class="container">
+          <div class="reveal services-header">
+            <span class="section-tag">What We Do</span>
+            <h2 class="services-heading">Surfaces We Bring<br />Back to Life</h2>
+            <p class="services-sub">
+              From concrete to wood, we use state-of-the-art pressure washing technology
+              tailored to each surface for perfect results every time.
+            </p>
+          </div>
+          <div class="services-grid">
+            <!-- Card 1 -->
+            <article class="reveal service-card">
+              <div class="service-img-wrap">
+                <img src="images/house.png" alt="House Washing" class="service-img" />
+                <div class="service-img-overlay"></div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">House Washing</h3>
+                <p class="service-card-desc">Safely remove dirt, algae, and grime from your siding. Restore your home's original curb appeal without any surface damage.</p>
+                <div class="service-tags">
+                  <span class="service-tag">Soft Wash</span>
+                  <span class="service-tag">All Siding Types</span>
+                  <span class="service-tag">Safe for Plants</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="reveal service-card reveal-delay-1">
+              <div class="service-img-wrap">
+                <img src="images/driveway.png" alt="Driveway Cleaning" class="service-img" />
+                <div class="service-img-overlay"></div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">Driveway Cleaning</h3>
+                <p class="service-card-desc">Erase years of tire marks, oil stains, and organic growth — revealing the bright, clean concrete underneath.</p>
+                <div class="service-tags">
+                  <span class="service-tag">Concrete</span>
+                  <span class="service-tag">Pavers</span>
+                  <span class="service-tag">Brick</span>
+                  <span class="service-tag">Asphalt</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="reveal service-card reveal-delay-2">
+              <div class="service-img-wrap">
+                <img src="images/deck.png" alt="Deck Restoration" class="service-img" />
+                <div class="service-img-overlay"></div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">Deck Restoration</h3>
+                <p class="service-card-desc">Revitalize your outdoor living space. We safely wash away weathering and prepare your wood for a fresh stain or seal.</p>
+                <div class="service-tags">
+                  <span class="service-tag">Wood</span>
+                  <span class="service-tag">Composite</span>
+                  <span class="service-tag">Stain Prep</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="reveal about-header">
+            <span class="section-tag">Why Choose Us</span>
+            <h2 class="about-heading">Affordable Prices.<br />Great Results.</h2>
+            <p class="about-sub">
+              We are a locally owned and operated pressure washing company serving the entire DMV area.
+              Our mission is simple: deliver showroom-clean results at prices everyone can afford.
+            </p>
+          </div>
+          <div class="about-pillars">
+            <!-- Pillar 1 -->
+            <div class="reveal about-pillar">
+              <div class="about-pillar-icon">💧</div>
+              <h3 class="about-pillar-title">Spotless Results</h3>
+              <p class="about-pillar-desc">We don't leave until the job is done right. Your property will look brand new.</p>
+            </div>
+            <!-- Pillar 2 -->
+            <div class="reveal about-pillar reveal-delay-1">
+              <div class="about-pillar-icon">💰</div>
+              <h3 class="about-pillar-title">Affordable Pricing</h3>
+              <p class="about-pillar-desc">Premium quality shouldn't break the bank. We offer competitive rates for every budget.</p>
+            </div>
+            <!-- Pillar 3 -->
+            <div class="reveal about-pillar reveal-delay-2">
+              <div class="about-pillar-icon">📍</div>
+              <h3 class="about-pillar-title">Local DMV Experts</h3>
+              <p class="about-pillar-desc">Proudly serving the entire DC, Maryland, and Virginia area with pride and professionalism.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="reveal contact-header">
+            <span class="section-tag" style="color: rgba(255,255,255,0.6)">Get In Touch</span>
+            <h2 class="contact-heading">Ready for a Cleaner Home?</h2>
+            <p class="contact-sub">
+              Reach out through any of the channels below.
+              We'll get back to you fast with a free estimate.
+            </p>
+          </div>
+          <div class="contact-cards">
+            <!-- Call -->
+            <a href="tel:+14103243988" class="reveal contact-card" id="contact-phone">
+              <div class="contact-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.49 3.4 2 2 0 0 1 3.48 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.72 6.72l1.83-1.83a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <span class="contact-card-label">Call Us</span>
+              <span class="contact-card-value">410-324-3988</span>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:a1pressurewash000@gmail.com" class="reveal contact-card reveal-delay-1" id="contact-email">
+              <div class="contact-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <span class="contact-card-label">Email Us</span>
+              <span class="contact-card-value">a1pressurewash000@gmail.com</span>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/a1.washing?igsh=MTB0YTc2NmgyeXBhcQ==" target="_blank" rel="noopener noreferrer" class="reveal contact-card reveal-delay-2" id="contact-instagram">
+              <div class="contact-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <span class="contact-card-label">Instagram</span>
+              <span class="contact-card-value">@a1.washing</span>
+            </a>
+          </div>
+
+          <!-- Summer Special Banner -->
+          <div class="summer">
+            <div class="summer-badge">☀️ Summer Special</div>
+            <h3 class="summer-title">Exclusive Deal Coming Soon</h3>
+            <p class="summer-text">
+              Follow us on Instagram and stay tuned — our Summer Special deal is dropping soon
+              with savings you won't want to miss.
+            </p>
+            <a href="https://www.instagram.com/a1.washing?igsh=MTB0YTc2NmgyeXBhcQ==" target="_blank" rel="noopener noreferrer" class="btn btn-primary-light summer-cta">
+              Follow for the Deal
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="logo.png" alt="A1 Pressure Washing" class="footer-logo-img" />
+            <span class="footer-logo-name">A1 Pressure Washing</span>
+          </div>
+          <p class="footer-tagline">Bringing the shine back to the DMV, one property at a time.</p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer Navigation">
+          <span class="footer-links-title">Navigate</span>
+          <a href="#services" class="footer-link">Services</a>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </nav>
+
+        <div class="footer-social">
+          <span class="footer-links-title">Connect</span>
+          <a href="https://www.instagram.com/a1.washing?igsh=MTB0YTc2NmgyeXBhcQ==" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            @a1.washing
+          </a>
+          <a href="tel:+14103243988" class="footer-social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.49 3.4 2 2 0 0 1 3.48 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.72 6.72l1.83-1.83a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            410-324-3988
+          </a>
+          <a href="mailto:a1pressurewash000@gmail.com" class="footer-social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            a1pressurewash000@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; <span id="year">2026</span> A1 Pressure Washing. All rights reserved. · DMV Area</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
