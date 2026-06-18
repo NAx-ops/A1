@@ -927,9 +927,157 @@ a {
   font-size: 0.9rem;
 }
 
+/* ==========================================
+   MOBILE & TABLET OPTIMIZATIONS
+   ========================================== */
 @media (max-width: 860px) {
   .footer-inner {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 }
+
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 70px;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .services, .about, .contact {
+    padding: 5rem 0;
+  }
+
+  /* Hero Section Mobile */
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-content {
+    padding-top: calc(var(--nav-height) + 1rem);
+  }
+
+  .hero-badge {
+    margin-bottom: 1.5rem;
+    padding: 0.45rem 1.1rem;
+  }
+
+  .hero-heading {
+    font-size: clamp(2.4rem, 8vw, 3.8rem);
+  }
+
+  .hero-sub {
+    margin: 1.2rem 0 2rem;
+    font-size: 1.05rem;
+  }
+
+  .hero-actions {
+    gap: 0.75rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%; /* Stacks buttons nicely on mobile */
+  }
+
+  .hero-stats {
+    margin-top: 3.5rem;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .hero-stat-divider {
+    display: none; /* Hide dividers to prevent layout break */
+  }
+
+  .hero-stat {
+    flex: 1;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-stat-num {
+    font-size: 1.75rem;
+  }
+
+  /* Services Section Mobile */
+  .services-header, .about-header, .contact-header {
+    margin-bottom: 3rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* About Pillars Mobile */
+  .about-pillars {
+    gap: 1.5rem;
+  }
+
+  .about-pillar {
+    padding: 1.75rem;
+  }
+
+  /* Contact Cards & Summer Banner Mobile */
+  .contact-cards {
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem 1.75rem;
+  }
+
+  .summer {
+    padding: 2.5rem 1.5rem;
+    border-radius: 18px;
+  }
+
+  .summer::before {
+    font-size: 8rem;
+  }
+
+  .summer-title {
+    font-size: 1.75rem;
+  }
+
+  .summer-text {
+    margin-bottom: 1.75rem;
+    font-size: 0.95rem;
+  }
+
+  /* Footer Mobile */
+  .footer {
+    padding: 4rem 0 0;
+  }
+
+  .footer-logo {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .hero-heading {
+    font-size: 2.2rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .hero-stat {
+    flex: none;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
