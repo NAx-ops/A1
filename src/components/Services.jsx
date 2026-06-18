@@ -4,7 +4,7 @@ import styles from './Services.module.css';
 const SERVICES = [
   {
     id: 'house',
-    img: '/images/house.png',
+    img: `${import.meta.env.BASE_URL}images/house.png`,
     alt: 'House Washing',
     title: 'House Washing',
     description: 'Safely remove dirt, algae, and grime from your siding. Restore your home\'s original curb appeal without any surface damage.',
@@ -12,7 +12,7 @@ const SERVICES = [
   },
   {
     id: 'driveway',
-    img: '/images/driveway.png',
+    img: `${import.meta.env.BASE_URL}images/driveway.png`,
     alt: 'Driveway Cleaning',
     title: 'Driveway Cleaning',
     description: 'Erase years of tire marks, oil stains, and organic growth — revealing the bright, clean concrete underneath.',
@@ -20,7 +20,7 @@ const SERVICES = [
   },
   {
     id: 'deck',
-    img: '/images/deck.png',
+    img: `${import.meta.env.BASE_URL}images/deck.png`,
     alt: 'Deck Restoration',
     title: 'Deck Restoration',
     description: 'Revitalize your outdoor living space. We safely wash away weathering and prepare your wood for a fresh stain or seal.',
