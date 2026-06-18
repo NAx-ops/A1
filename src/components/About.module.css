@@ -1,0 +1,61 @@
+.about {
+  padding: 8rem 0;
+  background: var(--clr-white);
+}
+
+.inner {}
+
+.header {
+  max-width: 680px;
+  margin-bottom: 5rem;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin: 0.5rem 0 1.2rem;
+}
+
+.sub {
+  font-size: 1.1rem;
+  color: var(--clr-gray);
+  line-height: 1.8;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.pillar {
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--clr-light-gray);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.4s var(--ease-spring);
+}
+
+.pillar:hover {
+  border-color: #ccc;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+  transform: translateY(-6px);
+}
+
+.pillarIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.pillarTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.01em;
+}
+
+.pillarDesc {
+  font-size: 1rem;
+  color: var(--clr-gray);
+  line-height: 1.7;
+}

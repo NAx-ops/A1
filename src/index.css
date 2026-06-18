@@ -1,0 +1,160 @@
+/* ===========================
+   CSS Variables & Reset
+=========================== */
+:root {
+  --clr-black: #0a0a0a;
+  --clr-dark: #121212;
+  --clr-dark-2: #1c1c1c;
+  --clr-dark-3: #2a2a2a;
+  --clr-gray: #767676;
+  --clr-light-gray: #f5f5f5;
+  --clr-off-white: #fafafa;
+  --clr-white: #ffffff;
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --max-width: 1200px;
+  --nav-height: 80px;
+
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--clr-black);
+  background: var(--clr-white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===========================
+   Shared Utility Classes
+=========================== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--clr-gray);
+  margin-bottom: 1rem;
+}
+
+.section-tag::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: var(--clr-gray);
+}
+
+/* ===========================
+   Buttons
+=========================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: 60px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.35s var(--ease-smooth);
+}
+
+.btn-primary {
+  background: var(--clr-black);
+  color: var(--clr-white);
+  border-color: var(--clr-black);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--clr-black);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.btn-primary-light {
+  background: var(--clr-white);
+  color: var(--clr-black);
+  border-color: var(--clr-white);
+}
+
+.btn-primary-light:hover {
+  background: transparent;
+  color: var(--clr-white);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(255,255,255,0.1);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--clr-white);
+  border-color: rgba(255,255,255,0.6);
+  backdrop-filter: blur(8px);
+}
+
+.btn-ghost:hover {
+  background: var(--clr-white);
+  color: var(--clr-black);
+  border-color: var(--clr-white);
+  transform: translateY(-4px);
+}
+
+/* ===========================
+   Scroll Reveal Animation
+=========================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s var(--ease-smooth), transform 0.8s var(--ease-smooth);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+.reveal-delay-3 { transition-delay: 0.45s; }

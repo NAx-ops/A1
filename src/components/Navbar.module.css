@@ -1,0 +1,184 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: var(--nav-height);
+  padding: 0 2rem;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navInner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.06);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
+}
+
+.logo {
+  height: 46px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brandName {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--clr-white);
+  transition: color 0.4s ease;
+  letter-spacing: -0.3px;
+}
+
+.scrolled .brandName {
+  color: var(--clr-black);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.link {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  transition: color 0.3s ease, opacity 0.3s ease;
+  position: relative;
+}
+
+.scrolled .link {
+  color: var(--clr-black);
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.navCta {
+  padding: 0.6rem 1.5rem !important;
+  font-size: 0.95rem !important;
+  background: var(--clr-white) !important;
+  color: var(--clr-black) !important;
+  border-color: var(--clr-white) !important;
+}
+
+.scrolled .navCta {
+  background: var(--clr-black) !important;
+  color: var(--clr-white) !important;
+  border-color: var(--clr-black) !important;
+}
+
+.navCta:hover {
+  background: transparent !important;
+  color: var(--clr-white) !important;
+}
+
+.scrolled .navCta:hover {
+  background: transparent !important;
+  color: var(--clr-black) !important;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 102;
+}
+
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 2.5px;
+  background: var(--clr-white);
+  border-radius: 4px;
+  transition: all 0.35s ease;
+}
+
+.scrolled .hamburger span {
+  background: var(--clr-black);
+}
+
+.active span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.active span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+
+.hamburger.active span {
+  background: var(--clr-black) !important;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  background: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  z-index: 101;
+  translate: 100% 0;
+  transition: translate 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.mobileMenuOpen {
+  translate: 0;
+}
+
+.mobileLink {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--clr-black);
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.mobileLink:hover {
+  opacity: 0.5;
+}
+
+.mobileCta {
+  font-size: 1.1rem !important;
+  padding: 1rem 2.5rem !important;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .navLinks { display: none; }
+  .hamburger { display: flex; }
+}

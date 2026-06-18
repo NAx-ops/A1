@@ -1,0 +1,134 @@
+.contact {
+  padding: 8rem 0;
+  background: var(--clr-black);
+  color: var(--clr-white);
+}
+
+.inner {}
+
+.header {
+  max-width: 680px;
+  margin-bottom: 4rem;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--clr-white);
+  margin: 0.5rem 0 1.2rem;
+}
+
+.sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 2rem 2.2rem;
+  border-radius: 20px;
+  border: 1.5px solid rgba(255,255,255,0.1);
+  text-decoration: none;
+  color: var(--clr-white);
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.4s var(--ease-spring);
+}
+
+.card:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.25);
+  transform: translateY(-6px);
+}
+
+.iconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.cardLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+.cardValue {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Summer Special banner */
+.summer {
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: 24px;
+  padding: 4rem;
+  text-align: center;
+  background: rgba(255,255,255,0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.summer::before {
+  content: '☀️';
+  position: absolute;
+  font-size: 12rem;
+  opacity: 0.04;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  pointer-events: none;
+}
+
+.summerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 30px;
+  padding: 0.4rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.summerTitle {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 900;
+  color: var(--clr-white);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.summerText {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.6);
+  max-width: 520px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.75;
+}
+
+.summerCta {
+  font-size: 1.05rem !important;
+}
