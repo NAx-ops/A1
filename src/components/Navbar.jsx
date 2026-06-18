@@ -27,7 +27,7 @@ export default function Navbar() {
       <header className={navClass}>
         <div className={`container ${styles.navInner}`}>
           <a href="#hero" className={styles.brand} onClick={closeMenu}>
-            <img src="/logo.png" alt="A1 Pressure Washing" className={styles.logo} />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="A1 Pressure Washing" className={styles.logo} />
             <span className={styles.brandName}>A1 Pressure Washing</span>
           </a>
           <nav className={styles.navLinks}>

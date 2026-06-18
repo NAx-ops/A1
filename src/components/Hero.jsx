@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section id="hero" className={styles.hero}>
       <div className={styles.bg}>
-        <img src="/images/house.png" alt="Beautifully power-washed home" className={styles.bgImg} />
+        <img src={`${import.meta.env.BASE_URL}images/house.png`} alt="Beautifully power-washed home" className={styles.bgImg} />
         <div className={styles.overlay} />
       </div>
       <div className={`container ${styles.content}`}>

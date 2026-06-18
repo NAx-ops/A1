@@ -8,7 +8,7 @@ export default function Footer() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.brand}>
           <div className={styles.logo}>
-            <img src="/logo.png" alt="A1 Pressure Washing" className={styles.logoImg} />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="A1 Pressure Washing" className={styles.logoImg} />
             <span className={styles.logoName}>A1 Pressure Washing</span>
           </div>
           <p className={styles.tagline}>Bringing the shine back to the DMV, one property at a time.</p>
